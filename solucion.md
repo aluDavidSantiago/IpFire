@@ -12,7 +12,7 @@ Confirmar que el tráfico pasa por IPFire.
 
 En el cliente:
 
-```bash
+```
 ip route
 ```
 
@@ -26,7 +26,7 @@ default via 192.168.10.254
 
 ## Paso 0.2 — Conectividad
 
-```bash
+```
 ping 8.8.8.8
 ```
 
@@ -67,6 +67,9 @@ Ruta:
 ```
 Servicios → Proxy web
 ```
+
+<img src="IMG/2.png" alt="2" width="600" height="auto">
+
 
 Activar:
 
@@ -110,6 +113,10 @@ Activar:
 
 * Filtro de URL
 
+
+<img src="IMG/5.png" alt="2" width="600" height="auto">
+
+
 Guardar.
 
 ***
@@ -144,6 +151,9 @@ elnacional.cat
 tecnocampus.cat
 ```
 
+<img src="IMG/7.png" alt="2" width="600" height="auto">
+
+
 Activar lista negra.
 
 Guardar cambios.
@@ -160,6 +170,11 @@ https://tecnocampus.cat
 ```
 
 Resultado esperado:
+
+<img src="IMG/12.png" alt="2" width="600" height="auto">
+
+<img src="IMG/13.png" alt="2" width="600" height="auto">
+
 
 * Acceso bloqueado
 
@@ -183,6 +198,9 @@ Buscar categorías y bloquear:
 
 * banking / finance
 * radio
+
+<img src="IMG/11.png" alt="2" width="600" height="auto">
+
 
 Guardar cambios.
 
@@ -221,7 +239,14 @@ Añadir:
 
 ```
 example.com/test
+
 ```
+o tambien intentaremos bloquear una URL especifica de YouTube como lo es un canal de YT.
+
+<img src="IMG/15.png" alt="2" width="600" height="auto">
+
+
+<img src="IMG/7.png" alt="2" width="600" height="auto">
 
 Guardar.
 
@@ -232,8 +257,15 @@ Guardar.
 Pruebas:
 
 ```
-http://example.com/test   → bloqueado
-http://example.com        → permitido
+http://youtube.com/@Fernanfloo   → bloqueado
+```
+
+<img src="IMG/18.png" alt="2" width="600" height="auto">
+
+<img src="IMG/19.png" alt="2" width="600" height="auto">
+
+```
+http://youtube.com        → permitido
 ```
 
 ***
@@ -258,6 +290,8 @@ Añadir:
 anime
 ```
 
+<img src="IMG/20.png" alt="2" width="600" height="auto">
+
 ***
 
 ## Excepción
@@ -274,6 +308,8 @@ Añadir:
 animenewsnetwork.com
 ```
 
+<img src="IMG/21.png" alt="2" width="600" height="auto">
+
 Guardar cambios.
 
 ***
@@ -284,6 +320,13 @@ Pruebas:
 
 ```
 animeflv.net              → bloqueado
+```
+
+<img src="IMG/22.png" alt="2" width="600" height="auto">
+
+<img src="IMG/23.png" alt="2" width="600" height="auto">
+
+```
 animenewsnetwork.com      → permitido
 ```
 
@@ -305,9 +348,11 @@ Filtro de URL → Control de acceso / Time rules
 
 Crear regla:
 
-* Hora inicio: 08:00
-* Hora fin: 14:00
+* Hora inicio
+* Hora fin
 * Acción: bloquear categoría o dominio
+
+<img src="IMG/26.png" alt="2" width="600" height="auto">
 
 Guardar cambios.
 
@@ -316,5 +361,10 @@ Guardar cambios.
 ## Validación
 
 * Dentro del horario → acceso bloqueado
+
+<img src="IMG/28.png" alt="2" width="600" height="auto">
+
 * Fuera del horario → acceso permitido
+
+<img src="IMG/27.png" alt="2" width="600" height="auto">
 
